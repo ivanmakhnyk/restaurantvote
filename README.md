@@ -1,4 +1,4 @@
-# Sample:  Hibernate/Spring/SpringMVC/REST
+**Sample:  Hibernate/Spring/SpringMVC/REST**
 
 ##Run sample
 
@@ -20,4 +20,10 @@ Provide a name query string parameter with <http://localhost:8080/echo?name=Test
 
 ## API document
 To see API document open <http://localhost:8080/swagger-ui.html>
+
+Application is connected to in memory database with mock data (for more details see [AppConfig.java](https://github.com/ivanmakhnyk/restaurantvote/blob/master/src/main/java/org/imakhnyk/interview/menuvoting/AppConfig.java) file):
+- Accouts to login (login/password): user/userp, admin/adminp, user1/user1p, user2/user2p, admin1/admin1p
+- Three restaurants mocked with few menu items for current date.
+
+To change database [application.properties](https://github.com/ivanmakhnyk/restaurantvote/blob/master/src/main/resources/application.properties) config file should be updated (add SQL driver maven dependency)
 
