@@ -2,12 +2,27 @@
 
 ##Run sample
 
-**Use Maven:**
-  To run the application use Maven ```  mvn clean spring-boot:run ```
+**Maven:**
 
-**Use Jar file:**
-  Or you can build the JAR file with ```mvn clean package ``` and run the JAR by typing: ``` java -jar target/gs-serving-web-content-0.1.0.jar ```
-The procedure above will create a runnable JAR. You can also opt to build a classic WAR file instead.
+  To run the application use Maven command line 
+  
+  ```
+  mvn clean spring-boot:run 
+  ```
+**Use IDE:**
+
+  Run main method in [org.imakhnyk.interview.menuvoting.Application.java](https://github.com/ivanmakhnyk/restaurantvote/blob/master/src/main/java/org/imakhnyk/interview/menuvoting/Application.java)
+
+**Run as Jar file:**
+
+  Or you can build the JAR file with 
+  ```
+  mvn clean package 
+  ``` 
+  and run the JAR by typing: 
+  ``` 
+  java -jar target/menuvoting-0.1.0.jar
+  ```
 
 **Logging:**
 Logging output is displayed. The service should be up and running within a few seconds.
