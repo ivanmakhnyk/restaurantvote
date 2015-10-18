@@ -65,10 +65,10 @@ public class VoteService {
 		List<VoteStatItem> result = new ArrayList<VoteStatItem>();
 		for (RestaurantDB mItem : all) {
 			VoteStatItem vi = new VoteStatItem();
-			vi.setMenuId(mItem.getId());
-			vi.setMenuName(mItem.getName());
-			if (statMap.containsKey(vi.getMenuId())) {
-				vi.setCount(statMap.get(vi.getMenuId()));
+			vi.setRestaurantId(mItem.getId());
+			vi.setRestaurantName(mItem.getName());
+			if (statMap.containsKey(vi.getRestaurantId())) {
+				vi.setCount(statMap.get(vi.getRestaurantId()));
 			} else {
 				vi.setCount(0);
 			}

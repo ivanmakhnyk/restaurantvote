@@ -8,8 +8,8 @@ package org.imakhnyk.interview.menuvoting.frontend.model;
  */
 public class VoteStatItem {
 	private long count;
-	private long menuId;
-	private String menuName;
+	private long restaurantId;
+	private String restaurantName;
 
 	public long getCount() {
 		return count;
@@ -19,20 +19,20 @@ public class VoteStatItem {
 		this.count = count;
 	}
 
-	public long getMenuId() {
-		return menuId;
+	public long getRestaurantId() {
+		return restaurantId;
 	}
 
-	public void setMenuId(long menuId) {
-		this.menuId = menuId;
+	public void setRestaurantId(long restaurantId) {
+		this.restaurantId = restaurantId;
 	}
 
-	public String getMenuName() {
-		return menuName;
+	public String getRestaurantName() {
+		return restaurantName;
 	}
 
-	public void setMenuName(String menuName) {
-		this.menuName = menuName;
+	public void setRestaurantName(String restaurantName) {
+		this.restaurantName = restaurantName;
 	}
 
 }

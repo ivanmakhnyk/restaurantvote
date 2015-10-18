@@ -5,7 +5,6 @@
 **Maven:**
 
   To run the application use Maven command line 
-  
   ```
   mvn clean spring-boot:run 
   ```
@@ -75,9 +74,9 @@ curl --user user2:user2p -X POST --header "Content-Type: application/json" http:
 
 curl --user admin:adminp -X GET  "http://localhost:8080/vote"
 [
-  {"count":0,"menuId":6,"menuName":"Restaurant Perkins"},
-  {"count":1,"menuId":7,"menuName":"Restaurant Cracker Barrel"},
-  {"count":2,"menuId":8,"menuName":"Restaurant le Jules Verne - Tour Eiffel Paris"}
+	{"count":0,"restaurantId":6,"restaurantName":"Restaurant Perkins"},
+	{"count":0,"restaurantId":7,"restaurantName":"Restaurant Cracker Barrel"},
+	{"count":0,"restaurantId":8,"restaurantName":"Restaurant le Jules Verne - Tour Eiffel Paris"}
 ]
 ```
 
