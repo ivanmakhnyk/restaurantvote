@@ -27,3 +27,42 @@ Application is connected to in memory database with mock data (for more details 
 
 To change database [application.properties](https://github.com/ivanmakhnyk/restaurantvote/blob/master/src/main/resources/application.properties) config file should be updated (add SQL driver maven dependency)
 
+## Curl samples
+
+Test echo ```curl -X GET "http://localhost:8080/echo?name=Test"``` result ```{"counter":2,"content":"Hello, Test!"}```
+
+**Voting scenario**
+
+User 'user' votes for restaurant with ID '7'
+```
+curl --user user:userp -X POST --header "Content-Type: application/json" http://localhost:8080/vote/7"
+```
+Users 'user1' and 'user2' vote for restaurant with ID '8'
+```
+curl --user user1:user1p -X POST --header "Content-Type: application/json" http://localhost:8080/vote/8"
+curl --user user2:user2p -X POST --header "Content-Type: application/json" http://localhost:8080/vote/8"
+```
+Admin request voting results
+```
+curl --user admin:adminp -X GET  "http://localhost:8080/vote"
+```
+
+Console example (curl request/response)
+```
+curl --user user:userp -X POST --header "Content-Type: application/json" http://localhost:8080/vote/7"
+{"status":"ok","message":"vote counted"}
+
+curl --user user1:user1p -X POST --header "Content-Type: application/json" http://localhost:8080/vote/8"
+{"status":"ok","message":"vote counted"}
+
+curl --user user2:user2p -X POST --header "Content-Type: application/json" http://localhost:8080/vote/8"
+{"status":"ok","message":"vote counted"}
+
+curl --user admin:adminp -X GET  "http://localhost:8080/vote"
+[
+  {"count":0,"menuId":6,"menuName":"Restaurant Perkins"},
+  {"count":1,"menuId":7,"menuName":"Restaurant Cracker Barrel"},
+  {"count":2,"menuId":8,"menuName":"Restaurant le Jules Verne - Tour Eiffel Paris"}
+]
+```
+
