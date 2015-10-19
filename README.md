@@ -33,7 +33,9 @@ Provide a name query string parameter with <http://localhost:8080/echo?name=Test
 ```{  "counter": 6,  "content": "Hello, Test!"}```
 
 ## API document
-To see API document open <http://localhost:8080/swagger-ui.html>
+To see API document open <http://localhost:8080/swagger-ui.html> (admin/adminp)
+
+![API screen](https://github.com/ivanmakhnyk/restaurantvote/blob/master/api.png)
 
 Application is connected to in memory database with mock data (for more details see [AppConfig.java](https://github.com/ivanmakhnyk/restaurantvote/blob/master/src/main/java/org/imakhnyk/interview/menuvoting/AppConfig.java) file):
 - Accouts to login (login/password): user/userp, admin/adminp, user1/user1p, user2/user2p, admin1/admin1p
